@@ -1,87 +1,101 @@
 *{
   margin: 0;
   padding: 0;  
+  font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /*box-sizing: border-box; no estoy muy seguro de su uso*/
 }
 
 body{
-  background: whitesmoke;
-  height: 1000px;
+  background-color: powderblue;
+  
 }
+ 
 .contenedor {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 90%;
+  min-width: 500px;
+  box-sizing: border-box;
   background: #444;
+  margin: 20px;
+  /*Flex*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
 }
 
 header {
   width: 100%;
-  height: 70px;
+  box-sizing: border-box;
   background: #2980B9;
-  position: fixed;
-  
-}
+ /* position: fixed; ME DESCONFIGURABA EL TAMAÑO DEL BODY*/
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+   /*Flex*/
+   display: flex;
+   flex-flow: row wrap;
 
-.ancho{
-width: 80%;
-height: 70px; 
-margin: auto; 
-background: grey;
+   /*Esto es equivalente a flex flow pero en dos instrucciones
+   flex-direction: row;
+   flex-wrap: wrap;
+  */
 }
-.navegacion{ 
-  width: 80%;
-  background: #fff;
-}
-
 
 .menu{
   display: flex;
-  align-content: flex-end;
+  align-content: center; 
+  padding: auto;
   
 }
 .menu li{
   width: 80%;
   padding: 5px;
   box-sizing: border-box;
-  display: inline;  
-  
+  list-style: none;
   
 }
 
 .menu li a {
-  display:flex;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
   color:white;
   
+  
 }
 
 footer{
-  clear: both;
-  margin-top: 20px;
-  padding: 20px;
-  float: left;
+  padding: 0px;
+  margin-top: 100px;
+  height: 100px;  
   box-sizing: border-box;
-  width: 80%;
+  width: 100%;
+  background-color: aqua;
 }
-
+.contenedor_pie{
+  display: flex;
+  width: 100%;
+  
+}
 footer p{
-  align-content: flex-end;
+text-align: center;
+align-content: center;
+
 }
 
 .menu li a:hover{
   color:#444;
 }
 
-.logo img{
-  background: hotpink;
-  padding: 0;
-  width: 20%;
-  height: 70px;
-  float:left;
+.logo{
+  width: 40%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  padding: 2px; 
+}
 
+.logo img{
+  padding: 5px;
+  box-sizing: border-box;
+  width: 40%;
+  
 }
