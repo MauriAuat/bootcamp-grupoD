@@ -6,36 +6,25 @@
 }
 
 body{
-   
-  /*background-color: #ffdd90;*/
   background-image: url("./Imagenes/Wolverine\ Comic.jpg");
-  
+  background-size: cover; 
 }
-/*
-body img{
-  opacity: 0.2; 
-}
- */
+
 .contenedor {
   width: 90%;
-  min-width: 500px;
-  box-sizing: border-box;
-  /*background: #444;*/
-  background: transparent;
+  min-width: 700px;/*me da un minimo para achicar pantalla*/
+  background-color:seashell;
   margin: 20px;
   /*Flex*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 /*ENCABEZADO*/
 header {
   width: 100%;
-  box-sizing: border-box;
-  background: #2980B9;
- /* position: fixed; ME DESCONFIGURABA EL TAMAÑO DEL BODY*/
-  padding: 0;
-  
+  background:linear-gradient(to bottom, #2980B9,seashell);
    /*Flex*/
    display: flex;
    flex-flow: row wrap;
@@ -46,10 +35,12 @@ header {
    flex-wrap: wrap;
   */
 }
+/*Menu de naveacion*/
 .navegacion{
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: flex-end;
+  background: transparent;
   
 }
 .menu{
@@ -68,7 +59,7 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color:rgb(196, 179, 25);
+  color:blue;
   box-sizing: border-box;
     
 }
@@ -77,62 +68,61 @@ header {
  .principal{
    display: flex;
    height: calc(100hv-);
+   
  }
 
- section{
+  .contenedor_seccion{
    display: flex;
    align-content: flex-start;
    flex-direction: row;
    width: 100%;
- }
+ } 
 .parrafos{
   font-family: fantasy;
   color:grey;
-  width: 100%;
-  margin: 10px;
+  overflow:hidden;
   box-sizing: border-box;
-  flex-direction: column;
 }
-
+/*Margenes que dependen de si la imagen está a la dcha o a la izquierda*/
+.derecho{
+  margin-right: 20px;
+}
+.izquierdo{
+  margin-left: 220px;
+}
+/*ANCHO DE PARRAFOS CUANDO HAY UNA IMAGEN AL COSTADO*/
+.tamaño{
+  width: 100%;
+}
 .contenedor_seccion{
-  display: flex;
-  padding: 20px;
-  flex-direction: row;
+  padding: 20px; 
 }
-#imagen img{
+#imagen{
+  overflow: hidden;
+}
+#imagen_right img{
   width: 400px;
-
-  box-sizing: border-box;
+  margin-left: 10px;
+  float: right;
+  overflow:hidden
 }
-
-footer{
-  padding: 0px;
-  margin-top: 100px;
-  height: 100px;  
-  box-sizing: border-box;
-  width: 100%;
-  background-color: aqua;
+#imagen_left img{
+  width: 400px;
+  float: left;
+  margin-right: 10px;
 }
-.contenedor_pie{
-  display: flex;
+p,h1{
+  width: 80%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   width: 100%;
   
-}
-footer p{
-text-align: center;
-align-content: center;
-
-}
-
-.menu li a:hover{
-  color:#444;
 }
 main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color:transparent;
-  
+  background-color:transparent; 
 }
 .logo{
   width: 20%;
@@ -144,4 +134,32 @@ main {
 .logo img{
   padding: 5px;
   width: 100%;
+}
+
+footer{
+  padding: 0px;
+  margin-top: 0;
+  height: 100px;  
+  box-sizing: border-box;
+  width: 100%;
+  /*background-color:teal;*/
+  background: linear-gradient(to bottom, seashell, teal); 
+}
+
+/*FOOTER*/
+.contenedor_pie{ 
+  width: 100%; 
+  margin-top: 100px;
+  display: flex;
+}
+/* Copyright del footer */
+#copyright p{
+text-align: center;
+align-content: center;
+width: 100%;
+font-size: small;
+margin-top: 50px;
+}
+.menu li a:hover{
+  color:#444;
 }
